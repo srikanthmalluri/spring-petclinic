@@ -32,7 +32,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        sh './mvnw verify'
+        sh './mvnw spring-boot:run </dev/null &>/dev/null &'
       }
     }
 
